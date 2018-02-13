@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e6eecd;
+  line-height: 100vh;
+  height: 100vh;
+  text-align: center;
+}
+
+#text {
+  line-height: 1.4;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 60px;
+  font-family: 'Fredericka the Great', cursive;
+  text-align: center;
+}
+
+.bee {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  width: 130px;
+	height: 90px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.bee-body {
+  background-color: #5f5559;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-animation: fly 1s infinite;
+  animation: fly 1s infinite;
+}
+
+.bee-body:before {
+  content: '';
+  position: absolute;
+  top: 26px;
+  right: 17px;
+  background-color: #fff;
+  width: 4px;
+  height: 11px;
+  z-index: 2;
+  border-radius: 50% 50% 2px 2px;
+}
+
+.bee-body:after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  right: 27px;
+  background-color: #fff;
+  width: 9px;
+  height: 17px;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.bee-body span {
+  position: absolute;
+  top: calc(50% - 80px);
+  left: 15px;
+  width: 200px;
+  height: 160px;
+  background-color: #f7d66d;
+  border-radius: 50%;
+}
+
+.bee-body span:nth-child(2) {
+  background-color: #5f5559;
+  left: 30px;
+}
+
+.bee-body span:nth-child(3) {
+  background-color: #f7d66d;
+  left: 45px;
+}
+
+.bee-body span:nth-child(4) {
+  background-color: #5f5559;
+  left: 60px;
+}
+
+.bee-extras {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: fly 1s infinite;
+  animation: fly 1s infinite;
+}
+
+.left-detail {
+  position: absolute;
+  content: '';
+  top: -8px;
+  right: 21px;
+  height: 32px;
+  width: 6px;
+  border-left: 4px solid #61555a;
+  border-radius: 100% 0 0 100%;
+  -webkit-transform: rotate(14deg);
+  transform: rotate(14deg);
+}
+
+.right-detail {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  height: 32px;
+  width: 18px;
+  z-index: -1;
+  border-left: 4px solid #61555a;
+  border-radius: 100% 0 0 100%;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.sting {
+  position: absolute;
+  left: -11px;
+  top: 50%;
+  width: 22px;
+  height: 4px;
+  border-radius: 100% 0 0 100%;
+  background-color: #61555a;
+  transform: rotate(-7deg);
+}
+
+.wing {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  box-shadow: inset 6px 1px 0px -4px rgba(0, 0, 0, 0.3);
+}
+
+.left {
+  width: 34px;
+  height: 52px;
+  top: -39px;
+  left: 8px;
+  -webkit-transform: rotate(-38deg);
+  transform: rotate(-38deg);
+  -webkit-animation: left 0.01s infinite;
+  animation: left 0.01s infinite;
+}
+
+.right {
+  width: 30px;
+  height: 45px;
+  top: -39px;
+  left: 43px;
+  -webkit-transform: rotate(-140deg);
+  transform: rotate(-140deg);
+  -webkit-animation: right 0.01s infinite;
+  animation: right 0.01s infinite;
+}
+
+.shadow {
+  width: 100px;
+  height: 30px;
+  background: rgba(0,0,0,0.3);
+  position: absolute;
+  bottom: -70px;
+  left: calc(50% - 50px);
+  border-radius: 50%;
+  -webkit-animation: shadow 1s infinite;
+  animation: shadow 1s infinite;
+}
+
+@-webkit-keyframes left {
+  0%  { -webkit-transform: rotate(-38deg); }
+  50%  { -webkit-transform: rotate(-57deg); }
+  100% { -webkit-transform: rotate(-38deg); }
+}
+
+@keyframes left {
+  0%  { transform: rotate(-38deg); }
+  50%  { transform: rotate(-57deg); }
+  100% { transform: rotate(-38deg); }
+}
+
+@-webkit-keyframes right {
+  0%  { -webkit-transform: rotate(-140deg); }
+  50%  { -webkit-transform: rotate(-160deg); }
+  100% { -webkit-transform: rotate(-140deg); }
+}
+
+@keyframes right {
+  0%  { transform: rotate(-140deg); }
+  50%  { transform: rotate(-160deg); }
+  100% { transform: rotate(-140deg); }
+}
+
+@-webkit-keyframes shadow {
+  0%  { width: 100px; left: calc(50% - 50px); }
+  50%  { width: 110px; left: calc(50% - 55px); }
+  100% { width: 100px; left: calc(50% - 50px); }
+}
+
+@keyframes shadow {
+  0%  { width: 100px; left: calc(50% - 50px); }
+  50%  { width: 110px; left: calc(50% - 55px); }
+  100% { width: 100px; left: calc(50% - 50px); }
+}
+
+@-webkit-keyframes fly {
+  0%  { top: 0;}
+  50%  { top: 10px;}
+  100% { top: 0;}
+}
+
+@keyframes fly {
+  0%  { top: 0;}
+  50%  { top: 10px;}
+  100% { top: 0;}
+}
